@@ -4,6 +4,10 @@
 
 [Türkçe açıklama aşağıda ↓](#türkçe)
 
+| Library | Tap a word | Themes and fonts | PDF, night theme |
+|---|---|---|---|
+| <img src="docs/screenshots/library.png" width="200" alt="Library with reading progress"> | <img src="docs/screenshots/word.png" width="200" alt="Turkish meaning of a tapped word"> | <img src="docs/screenshots/themes.png" width="200" alt="Themes, fonts and page previews"> | <img src="docs/screenshots/pdf-night.png" width="200" alt="PDF in the night theme with page previews"> |
+
 ## Why I built it
 
 I read a lot of English non-fiction, and the hard part was never the grammar: it was the advanced vocabulary.
@@ -97,7 +101,7 @@ Türkçesini anında gösteren bir okuma uygulaması.**
 
 ### Neden yaptım?
 
-Çok İngilizce kitap okuyorum. Zor olan gramer değil, ileri seviye kelimelerdi; her seferinde başka bir uygulamaya
+Zor olan gramer değil, ileri seviye kelimelerdi; her seferinde başka bir uygulamaya
 geçip kelime aramak okumanın akışını bozuyordu. Bir de artık yavaşladığı için kullanmadığım ama ekranı hâlâ çok iyi
 olan eski bir Android tabletim vardı.
 
