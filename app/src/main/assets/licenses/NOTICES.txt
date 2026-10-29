@@ -1,0 +1,29 @@
+Copyright (C) 2026 Kadd0
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. It comes with ABSOLUTELY NO WARRANTY.
+
+Source code: https://github.com/Kadd0/sayfa
+
+INCLUDED WORKS
+
+PDF.js 1.10.100 · Mozilla Foundation · Apache License 2.0
+
+Hypher · Copyright (c) 2011 Bram Stein · BSD 3-Clause
+
+US English hyphenation patterns · Copyright (C) 1990, 2004, 2005 Gerard D.C. Kuiken. Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.
+
+Literata · Copyright 2017 The Literata Project Authors · SIL Open Font License 1.1
+
+Crimson Text · Copyright 2010 The Crimson Text Project Authors · SIL Open Font License 1.1
+
+DICTIONARY
+
+WikDict en-tr by Karl Bartel, data from Wiktionary via DBnary · CC BY-SA 4.0
+
+FreeDict English–Turkish · Copyright (C) 1999–2017 various authors, based on gtksozluk by Mehmet Ali Vardar · GPL-2.0-or-later
+
+The combined dictionary is distributed under GPL-3.0-or-later. Full license texts are in the app's assets/licenses folder and in the source repository.
+
+ONLINE
+
+The "Cümleyi Çevir" button sends that sentence to Google Translate (translate.googleapis.com) or MyMemory (mymemory.translated.net). Everything else works offline.

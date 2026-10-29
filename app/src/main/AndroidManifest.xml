@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- Only for the optional "translate sentence" button; books and the dictionary work offline. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- fullSensor: every screen follows the tablet's rotation (all four ways) by itself. -->
+    <application
+        android:label="Sayfa"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@android:style/Theme.Holo.NoActionBar"
+        android:largeHeap="true"
+        android:hardwareAccelerated="true"
+        android:allowBackup="false"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity
+            android:name=".LibraryActivity"
+            android:exported="true"
+            android:screenOrientation="fullSensor"
+            android:configChanges="orientation|screenSize|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ReaderActivity"
+            android:exported="false"
+            android:screenOrientation="fullSensor"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+
+        <activity
+            android:name=".PdfActivity"
+            android:exported="false"
+            android:screenOrientation="fullSensor"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+
+        <activity
+            android:name=".WordsActivity"
+            android:exported="false"
+            android:screenOrientation="fullSensor"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+    </application>
+</manifest>

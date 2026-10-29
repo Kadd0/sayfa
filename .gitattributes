@@ -1,0 +1,10 @@
+* text=auto eol=lf
+*.bat text eol=crlf
+*.db binary
+*.ttf binary
+*.png binary
+*.jar binary
+# Third-party code bundled as-is
+app/src/main/assets/pdf.js linguist-vendored
+app/src/main/assets/pdf.worker.js linguist-vendored
+app/src/main/assets/hyph.js linguist-vendored

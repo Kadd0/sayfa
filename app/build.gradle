@@ -1,0 +1,68 @@
+plugins {
+    id 'com.android.application'
+}
+
+// Release signing comes from keystore.properties (never committed). Without it, release builds stay unsigned.
+def keystoreFile = rootProject.file('keystore.properties')
+def keystore = new Properties()
+if (keystoreFile.exists()) keystoreFile.withInputStream { keystore.load(it) }
+
+android {
+    namespace = 'io.github.kadd0.sayfa'
+    compileSdk = 36
+
+    defaultConfig {
+        applicationId = 'io.github.kadd0.sayfa'
+        // Built for old tablets: Android 4.4 KitKat and newer.
+        minSdk = 19
+        // Kept at KitKat on purpose: newer targets change how the app may read books from shared storage.
+        targetSdk = 19
+        versionCode = 3
+        versionName = '3.0'
+    }
+
+    signingConfigs {
+        if (keystore['storeFile']) {
+            release {
+                storeFile = file(keystore['storeFile'])
+                storePassword = keystore['storePassword']
+                keyAlias = keystore['keyAlias']
+                keyPassword = keystore['keyPassword']
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled = false
+            if (keystore['storeFile']) signingConfig = signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+
+    // The dictionary is a SQLite file copied out on first start; keep it uncompressed.
+    androidResources {
+        noCompress += 'db'
+    }
+
+    testOptions {
+        // Tests run on the desktop JVM against Android's stub classes.
+        unitTests.returnDefaultValues = true
+    }
+
+    lint {
+        // Deliberate for a KitKat-only app: old target, fixed rotation modes, Turkish-only left-to-right UI.
+        disable += ['ExpiredTargetSdkVersion', 'OldTargetApi', 'DiscouragedApi', 'RtlHardcoded', 'SetTextI18n',
+                    'AndroidGradlePluginVersion', 'GradleDependency']
+        abortOnError = true
+        warningsAsErrors = true
+    }
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+}
